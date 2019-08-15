@@ -12,6 +12,7 @@
         <!--View Controller-->
         <scene sceneID="WD9-ye-fBA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFj-t0-FtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="fWM-41-xBh" customClass="ViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QID-lp-Ikh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -34,9 +35,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="yOA-Ix-etw"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IFj-t0-FtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="168.6656671664168"/>
+            <point key="canvasLocation" x="1129" y="169"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="13Y-7p-4Qo">
