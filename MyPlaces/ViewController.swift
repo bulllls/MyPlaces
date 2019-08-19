@@ -36,7 +36,7 @@ class ViewController: UITableViewController {
         return cell
     }
 
-    
+    @IBAction func canselAction(_ segue: UIStoryboardSegue) {}
 
 
 }
