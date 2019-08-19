@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root-->
+        <!--My Places-->
         <scene sceneID="WD9-ye-fBA">
             <objects>
                 <tableViewController id="fWM-41-xBh" customClass="ViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="fWM-41-xBh" id="70i-UX-k8T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root" id="yOA-Ix-etw"/>
+                    <navigationItem key="navigationItem" title="My Places" id="yOA-Ix-etw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFj-t0-FtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,6 +46,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGG-dj-Jhd">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
