@@ -10,7 +10,6 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
-    var newPlace = Place()
     var imageIsChanger = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -23,10 +22,8 @@ class NewPlaceViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            self.newPlace.savePlaces()
-        }
-        newPlace.savePlaces()
+        
+        // newPlace.savePlaces()
         
         //убираем нижние пустые подчеркивания
         tableView.tableFooterView = UIView()
@@ -79,6 +76,7 @@ class NewPlaceViewController: UITableViewController {
     
     func saveNewPlace() {
         
+        
         var image: UIImage?
         
         if imageIsChanger {
@@ -87,11 +85,15 @@ class NewPlaceViewController: UITableViewController {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         
-//        newPlace = Place(name: placeName.text!,
-//                         location: placeLocation.text,
-//                         type: placeType.text,
-//                         image: image,
-//                         restaurantImage: nil)
+        let imageData = image?.pngData()
+        
+       let newPlace = Place(name: placeName.text!,
+                            location: placeLocation.text,
+                            type: placeType.text,
+                            imageData: imageData)
+        
+        StorageManager.saveObject(newPlace)
+        
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
