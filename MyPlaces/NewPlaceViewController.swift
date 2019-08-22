@@ -72,25 +72,29 @@ class NewPlaceViewController: UITableViewController {
         }
     }
     
-    func saveNewPlace() {
-        
-        
+    func savePlace() {
         var image: UIImage?
-        
         if imageIsChanger {
             image = placeImage.image
         } else {
             image = #imageLiteral(resourceName: "imagePlaceholder")
         }
-        
         let imageData = image?.pngData()
-        
-       let newPlace = Place(name: placeName.text!,
+        let newPlace = Place(name: placeName.text!,
                             location: placeLocation.text,
                             type: placeType.text,
                             imageData: imageData)
         
-        StorageManager.saveObject(newPlace)
+        if currentPlace != nil {
+            try! realm.write {
+                currentPlace?.name = newPlace.name
+                currentPlace?.location = newPlace.location
+                currentPlace?.type = newPlace.type
+                currentPlace?.imageData = newPlace.imageData
+            }
+        } else {
+            StorageManager.saveObject(newPlace)
+        }
         
     }
     
