@@ -97,6 +97,7 @@ class NewPlaceViewController: UITableViewController {
     private func setupEditScreen() {
         
         if currentPlace != nil {
+            setupNavigationBar()
             guard let data = currentPlace?.imageData, let image = UIImage(data: data) else { return }
             
             placeImage.image = image
@@ -109,9 +110,13 @@ class NewPlaceViewController: UITableViewController {
     
     
     private func setupNavigationBar() {
+        if let topItem = navigationController?.navigationBar.topItem {
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
         navigationItem.leftBarButtonItem = nil
         title = currentPlace?.name
         saveButton.isEnabled = true
+        
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {

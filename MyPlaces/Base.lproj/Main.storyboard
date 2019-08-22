@@ -82,7 +82,7 @@
                             <outlet property="delegate" destination="fWM-41-xBh" id="70i-UX-k8T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Places" id="yOA-Ix-etw">
+                    <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="yOA-Ix-etw">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z2K-dk-7dt">
                             <connections>
                                 <segue destination="amJ-UO-qpQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="aud-TP-cJU"/>
@@ -114,7 +114,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="9z0-rS-Sbf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.50000000000006"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
@@ -242,7 +242,7 @@
                             <outlet property="delegate" destination="MmH-JV-U4j" id="r5L-Yn-7XL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="j6j-3y-4Ax">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="j6j-3y-4Ax">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AaI-1W-1LK">
                             <connections>
                                 <action selector="cancelAction:" destination="MmH-JV-U4j" id="2vN-m8-6ZW"/>
@@ -272,8 +272,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2y5-g5-Rie" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGG-dj-Jhd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BGG-dj-Jhd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
