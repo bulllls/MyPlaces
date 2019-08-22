@@ -73,6 +73,7 @@
                                     <outlet property="locationLabel" destination="lej-Pk-5Xy" id="eb8-u0-2qe"/>
                                     <outlet property="nameLabel" destination="j3P-f5-ZOB" id="PBK-z5-Ffi"/>
                                     <outlet property="typeLabel" destination="Ezd-gq-E1u" id="k9w-gl-Ofw"/>
+                                    <segue destination="MmH-JV-U4j" kind="show" identifier="showDetail" id="BcO-bj-8bn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -264,7 +265,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDa-Pk-7FW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="qCq-cN-5CN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2565.5999999999999" y="168.6656671664168"/>
+            <point key="canvasLocation" x="1913" y="169"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="13Y-7p-4Qo">
@@ -306,10 +307,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYN-Wv-hsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="169"/>
+            <point key="canvasLocation" x="1913" y="-527"/>
         </scene>
     </scenes>
     <resources>
         <image name="Photo" width="195" height="196"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BcO-bj-8bn"/>
+    </inferredMetricsTieBreakers>
 </document>

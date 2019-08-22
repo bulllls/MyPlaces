@@ -10,6 +10,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
+    var currentPlace: Place?
     var imageIsChanger = false
     
     @IBOutlet var saveButton: UIBarButtonItem!
@@ -22,16 +23,13 @@ class NewPlaceViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // newPlace.savePlaces()
-        
         //убираем нижние пустые подчеркивания
         tableView.tableFooterView = UIView()
-        
         //присваиваем неактивное значение кнопке save
         saveButton.isEnabled = false
-        
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        //метод для редактирования
+        setupEditScreen()
     }
     
     // MARK: Table View Delegate
@@ -95,6 +93,19 @@ class NewPlaceViewController: UITableViewController {
         StorageManager.saveObject(newPlace)
         
     }
+    
+    private func setupEditScreen() {
+        
+        if currentPlace != nil {
+            guard let data = currentPlace?.imageData, let image = UIImage(data: data) else { return }
+            
+            placeImage.image = image
+            placeName.text = currentPlace?.name
+            placeType.text = currentPlace?.type
+            placeLocation.text = currentPlace?.location
+        }
+    }
+    
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
