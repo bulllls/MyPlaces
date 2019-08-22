@@ -102,6 +102,7 @@ class NewPlaceViewController: UITableViewController {
         
         if currentPlace != nil {
             setupNavigationBar()
+            imageIsChanger = true
             guard let data = currentPlace?.imageData, let image = UIImage(data: data) else { return }
             
             placeImage.image = image
