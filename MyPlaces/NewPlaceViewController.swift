@@ -111,6 +111,7 @@ class NewPlaceViewController: UITableViewController {
     private func setupNavigationBar() {
         navigationItem.leftBarButtonItem = nil
         title = currentPlace?.name
+        saveButton.isEnabled = true
     }
     
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
