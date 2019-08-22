@@ -100,6 +100,7 @@ class NewPlaceViewController: UITableViewController {
             guard let data = currentPlace?.imageData, let image = UIImage(data: data) else { return }
             
             placeImage.image = image
+            placeImage.contentMode = .scaleAspectFill
             placeName.text = currentPlace?.name
             placeType.text = currentPlace?.type
             placeLocation.text = currentPlace?.location
