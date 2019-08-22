@@ -108,6 +108,11 @@ class NewPlaceViewController: UITableViewController {
     }
     
     
+    private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = nil
+        title = currentPlace?.name
+    }
+    
     @IBAction func cancelAction(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
