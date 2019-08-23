@@ -12,9 +12,13 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet var reversedSortingButton: UIBarButtonItem!
+    
     var places: Results<Place>!
    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
       
         places = realm.objects(Place.self)
@@ -77,6 +81,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
     }
 
-
+    @IBAction func sortSelected(_ sender: UISegmentedControl) {
+        
+    }
+    
+    @IBAction func reversedSorting(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    
 }
 
