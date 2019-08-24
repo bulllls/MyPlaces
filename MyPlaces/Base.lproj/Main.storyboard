@@ -191,17 +191,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jf3-SE-dMe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
-                                <segments>
-                                    <segment title="Date"/>
-                                    <segment title="Name"/>
-                                </segments>
-                                <connections>
-                                    <action selector="sortSelected:" destination="tM1-6E-EOq" eventType="valueChanged" id="TVF-mu-biE"/>
-                                    <action selector="sortSelection:" destination="tM1-6E-EOq" eventType="valueChanged" id="dkf-Ow-bcR"/>
-                                </connections>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SUo-Lg-0r2">
                                 <rect key="frame" x="0.0" y="93" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -270,6 +259,16 @@
                                     <outlet property="delegate" destination="tM1-6E-EOq" id="ZVq-7e-Z58"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jf3-SE-dMe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Date"/>
+                                    <segment title="Name"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSelected:" destination="tM1-6E-EOq" eventType="valueChanged" id="b2P-rP-lsS"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -297,7 +296,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="reversedSortingButton" destination="Vcg-vW-53n" id="Y6S-Gc-DFU"/>
-                        <outlet property="segmentedControl" destination="jf3-SE-dMe" id="1Xw-MA-Wdt"/>
+                        <outlet property="segmentedControl" destination="jf3-SE-dMe" id="o54-04-p0R"/>
                         <outlet property="tableView" destination="SUo-Lg-0r2" id="iTO-ke-56r"/>
                     </connections>
                 </viewController>
