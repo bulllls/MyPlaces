@@ -11,17 +11,25 @@ import RealmSwift
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let searchController = UISearchController(searchResultsController: nil)
+    var places: Results<Place>!
+    var ascendingSorting = true
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var reversedSortingButton: UIBarButtonItem!
-    
-    var places: Results<Place>!
-    var ascendingSorting = true
    
     override func viewDidLoad() {
         super.viewDidLoad()
       
         places = realm.objects(Place.self)
+        
+        //Setup the search controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         
     }
     
@@ -110,3 +118,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 }
 
+extension ViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        <#code#>
+    }
+}
